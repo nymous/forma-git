@@ -4,30 +4,133 @@ class: center, middle, inverse
 
 ---
 
-# Title
-## Subtitle
+# Git
+### aka *La gestion de versions pour les nuls*
 
-#### https://tikiki.github.io/forma-boilerplate
+# **TODO: Insérer le logo de git**
+
+#### https://tikiki.github.io/forma-git
+
+---
+
+## Première partie : 
+# Pourquoi
 
 ---
 layout: false
 
 .left-column[
-## Bullet point
+## Projet perso
 ]
 
 .right-column[
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  - On avance sur ses fonctionnalités, ça marche...
+]
 
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+--
+count: false
 
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+.right-column-no-padding[
+  ..., jusqu'à un moment où on essaie une nouvelle feature qui plante tout, on tente de réparer, ça fout encore plus la merde, c'est le chaos, des modifications dans 20 fichiers différents... On finit par appuyer frénétiquement sur Ctrl+Z en priant pour avoir assez d'historique.
+]
 
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+--
+count: false
 
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+.right-column[
+  - Si on est plus prévoyant, on fait une copie du dossier "version_qui_marche_2017-02-12"...
+]
+
+--
+count: false
+
+.right-column-no-padding[
+  ..., puis une autre "version_qui_marche_vraiment_2017-02-12-14h35"... Le répertoire de travail est dégueulasse, y'a 15 copies partout, et on ne s'y retrouve plus.
+]
+
+---
+
+.left-column[
+## Projet perso
+]
+
+.right-column[
+  - On commence à bosser sur une feature, et puis on a soudainement une idée de génie sur laquelle on veut bosser immédiatement. Problème : on a laissé le code dans un état semi-terminé, ça ne peut pas compiler parce qu'on a pas fini, mais on ne veut pas revenir en arrière pour ne pas perdre le travail déjà effectué.
+]
+
+--
+count: false
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+.right-column[
+  - On se retrouve à commenter du code qui ne sert plus/est cassé, en se disant que ça servira peut-être un jour ➡ le code est pollué
+]
+
+--
+count: false
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+.right-column[
+  - Si jamais son ordinateur meurt, adieu code... :cry:
+]
+
+---
+
+.left-column[
+## Projet perso
+## Projet collectif
+]
+
+.right-column[
+  - Envoyer un .zip avec son code, et les gens doivent copier-coller les parties modifiées dans leur code ?
+]
+
+--
+count: false
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+.right-column[
+  - Google Drive ? Mais les fichiers ne sont pas synchronisés en temps réel, et on ne sait pas comment Google va fusionner un fichier modifié par 2 personnes différentes.
+]
+
+--
+count: false
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+.right-column[
+  - Utiliser une seule machine, et coder à tour de rôle...
 ]
 
 ---
