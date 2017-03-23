@@ -1,9 +1,13 @@
 Presentation boilerplate
 =====================
 
+Le texte de cette présentation est [disponible ici](Forma_git.md).
+
+## Usage
+
 :warning:
 Run `gulp updateRemark` to download latest version of Remark before working.
-:warning
+:warning:
 
 Write the `.md` in src, it will be included in the `src/index.html`.
 
