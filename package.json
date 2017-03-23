@@ -1,9 +1,9 @@
 {
-  "name": "forma-boilerplate",
+  "name": "forma-git",
   "version": "1.0.0",
-  "description": "Presentation boilerplate",
+  "description": "Presentation git",
   "main": "index.js",
-  "repository": "https://github.com/tikiki/forma-boilerplate",
+  "repository": "https://github.com/tikiki/forma-git",
   "author": "Thomas Gaudin <thomas.gaudin@centraliens-lille.org>",
   "license": "MIT",
   "devDependencies": {

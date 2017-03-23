@@ -7,14 +7,18 @@ class: center, middle, inverse
 # Git
 ### aka *La gestion de versions pour les nuls*
 
-# **TODO: Insérer le logo de git**
+<br />
 
+.logo_img[![Git logo](./assets/img/git_logo.png)]
+
+<br />
+<br />
 #### https://tikiki.github.io/forma-git
 
 ---
 
 ## Première partie : 
-# Pourquoi
+# Pourquoi utiliser un gestionnaire de version ?
 
 ---
 layout: false
