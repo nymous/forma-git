@@ -121,7 +121,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 Cette fois-ci, git nous indique qu'il a détecté des fichiers dans notre dossier, mais que ceux-ci ne sont pas "trackés" par git. En effet, git ne sauvegarde pas par défaut tous les fichiers du dossier, il faut lui indiquer spécifiquement ce dont il doit se souvenir. Là aussi, la commande à entrer est indiquée par git.
 
-``bash
+```bash
 $ git add README.md
 $ git status
 On branch master
@@ -138,15 +138,17 @@ Maintenant, git a compris qu'on veut garder l'état de ce fichier en mémoire. I
 
 ```bash
 $ git commit
-#Normalement git va vous dire que vous n'avez configuré ni votre nom ni votre adresse mail. Ces deux options sont obligatoires, car elles permettent d'identifier qui fait chaque commit.
+#Normalement git va vous dire que vous n'avez configuré ni votre nom ni votre adresse mail.
+#Ces deux options sont obligatoires, car elles permettent d'identifier qui fait chaque commit.
 #Réglons le problème en suivant les instructions de git :
 $ git config --global user.name "Thomas Gaudin"
-$ git config --global user.email "thomas.gaudin@centraliens-lille.org
+$ git config --global user.email "thomas.gaudin@centraliens-lille.org"
 #On peut réessayer notre commit
 $ git commit
 #Taper sur la première ligne un message court de commit, qui indique brièvement la fonction du commit
 #Vim (l'éditeur par défaut) indique généralement avec de la couleur à quel moment le message est trop long (50 caractères)
-#Si jamais vous avez des informations particulières à ajouter au commit, une description plus détaillée du travail effectué, ou quand vous compacterez plusieurs commits en un seul, vous pouvez sauter une ligne, et écrire un roman en dessous.
+#Si jamais vous avez des informations particulières à ajouter au commit, une description plus détaillée du travail effectué,
+#ou quand vous compacterez plusieurs commits en un seul, vous pouvez sauter une ligne, et écrire un roman en dessous.
 #Tout le texte commenté en dessous est un récapitulatif de ce que va faire git (les fichiers ajoutés, supprimés et modifiés)
 #Résultat de la commande :
 [master (root-commit) 8b8a0d0] First commit
@@ -156,6 +158,9 @@ $ git status
 On branch master
 nothing to commit, working directory clean
 ```
+
+Écrire de bons messages de commit, ça veut dire ne pas faire ça :stuck_out_tongue: :
+![XKCD Git commit](./src/assets/img/xkcd_git_commit.png)
 
 On se chauffe, deuxième commit ?
 
@@ -192,6 +197,12 @@ On avait un fichier qui était "untracked". On l'a déplacé dans la zone "stage
 
 `git config --global user.name "Thomas Gaudin"`
 `git config --global user.email "thomas.gaudin@centraliens-lille.org"`
-Config : pull --ff-only, merge --no-ff
+Config : `pull --ff-only`, `merge --no-ff`
 Git aime le texte, pas les binaires. Pourquoi ? diff, merge, commits légers, fichiers normalement plus petits... -> git lfs ? l'autre truc ?
 **JAMAIS** faire de `git add .`
+
+------------------------
+
+### Sources
+
+- XKCD https://xkcd.com/1296/
