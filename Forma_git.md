@@ -6,7 +6,7 @@ Forma git
 **Projet perso :**
 
   - On avance sur ses fonctionnalités, ça marche, jusqu'à un moment où on essaie une nouvelle feature qui plante tout, on tente de réparer, ça fout encore plus la merde, c'est le chaos, des modifications dans 20 fichiers différents... On finit par appuyer frénétiquement sur Ctrl+Z en priant pour avoir assez d'historique.
-  - Si on est plus prévoyant, on fait une copie du dossier "version_qui_marche_2017-02-12", puis une autre "version_qui_marche_vraiment_2017-02-12-14h35"... Le répertoire de travail est dégueulasse, y'a 15 copies partout, et on ne s'y retrouve plus.
+  - Si on est plus prévoyant, on fait une copie du dossier `version_qui_marche_2017-02-12`, puis une autre `version_qui_marche_vraiment_2017-02-12-14h35`... Le répertoire de travail est dégueulasse, y'a 15 copies partout, et on ne s'y retrouve plus.
   - On commence à bosser sur une feature, et puis on a soudainement une idée de génie sur laquelle on veut bosser immédiatement. Problème : on a laissé le code dans un état semi-terminé, ça ne peut pas compiler parce qu'on a pas fini, mais on ne veut pas revenir en arrière pour ne pas perdre le travail déjà effectué.
   - On se retrouve à commenter du code qui ne sert plus/est cassé, en se disant que ça servira peut-être un jour -> le code est pollué
   - Si jamais son ordinateur meurt, adieu code... :cry:
@@ -19,6 +19,8 @@ Comment bosser à plusieurs sur un projet ? Comment partager son code ?
   - Utiliser une seule machine, et coder à tour de rôle...
 
 C'est dans toute ces situations que les gestionnaires de versions peuvent servir.
+
+Leurs avantages :
 
   - On peut sauvegarder l'état de tous les fichiers à un instant dans le temps, et naviguer dans l'historique de tous ces "points" à l'envi. Ajout/suppression/modification de lignes, ajout/suppression de fichiers, tout est sauvegardé, et un message permettant d'indiquer l'objet du changement permet de s'y retrouver.
   - Un serveur central garde une copie de tout le code, on peut le blinder pour protéger les sources.
@@ -35,17 +37,23 @@ C'est dans toute ces situations que les gestionnaires de versions peuvent servir
 
 ## (Dé)centralisé ?
 
-SVN et CVS sont des gestionnaires de versions **centralisée** => un seul dépôt sert de référence, une seule source de vérité : le serveur central où le code est stocké.
-[Image de chez Mathieu Lemoine]
+![Gestionnaire de versions centralisé](./src/assets/img/centralised.png)
+
+SVN et CVS sont des gestionnaires de versions **centralisés** => un seul dépôt sert de référence, une seule source de vérité : le serveur central où le code est stocké.
+
 **Avantages** : Tout le monde est toujours à jour sur le code.
+
 **Problèmes** : Si Internet n'est pas là, vous ne pouvez pas travailler. Si Internet est lent, vous travaillez très difficilement.
 
-Git et Mercurial sont des gestionnaires de versions **décentralisée**. Chacun va travailler à son rythme sur une version locale du dépot.
-[Image de gitflow avec les dépôts chez tout le monde et le repo central]
+![Gestionnaire de versions décentralisé](./src/assets/img/distributed.png)
+
+Git et Mercurial sont des gestionnaires de versions **décentralisés**. Chacun va travailler à son rythme sur une version locale du dépot.
+
 **Avantages** :
   - Le code est chez tous les développeurs, ce qui limite les risques si jamais le serveur central meurt.
   - On peut travailler hors-ligne (et les opérations sont plus rapides, car faites en local).
   - On peut tester des trucs, faire des brouillons localement sans polluer le dépôt principal (et les autres développeurs).
+
 **Désavantages** :
   - Cloner le dépôt est plus long, puisqu'on récupère tout l'historique du projet (mais encore une fois, si le serveur meurt on a le code).
   - Difficile de merge des fichiers binaires modifiés par 2 personnes en même temps.
@@ -54,20 +62,26 @@ Git et Mercurial sont des gestionnaires de versions **décentralisée**. Chacun 
 
 Git est un logiciel de gestion de versions.
 Développé par Linus Torvalds en 2005 pour gérer le développement du noyau Linux.
+
 Git est disponible sur à peu près toutes les plateformes : Windows, macOS, Linux (toutes les distro), Android (et autres ARM)...
 
 (PS : Ça se prononce "guitte", à l'inverse de "gif" (qui se dit "jif"))
 
-Ligne de commande (mais plusieurs interfaces graphiques sont disponibles, open-source ou non, gratuites ou payantes)
-Décentralisé
-Système de branches très léger et facile d'utilisation (ça ne vous fait ni chaud ni froid pour le moment, mais on y reviendra en temps voulu)
+Caractéristiques :
+
+- Ligne de commande (mais plusieurs interfaces graphiques sont disponibles, open-source ou non, gratuites ou payantes)
+- Décentralisé
+- Système de branches très léger et facile d'utilisation (ça ne vous fait ni chaud ni froid pour le moment, mais on y reviendra en temps voulu)
 
 ### Téléchargement
 
-**AJOUTER DES LIENS**
-Pour Windows : git-scm (vient avec le git bash), ou cmder, ou github desktop
-Pour Linux : `apt install git` ou `yum install git` ou `pacman <truc> git`
-Pour Mac : avec Homebrew, `brew install git`
+**Pour Windows** : [git-scm](https://git-scm.com/downloads) (vient avec le git bash), ou [cmder](http://cmder.net/) (cliquer sur "Download full"), ou [Github Desktop](https://desktop.github.com/) (vient aussi avec le git bash).
+
+**Pour Linux** : `apt install git` ou `yum install git` ou `pacman <truc> git`.
+
+**Pour Mac** : avec [Homebrew](https://brew.sh/), `brew install git`.
+
+Interfaces graphiques en vrac (plus ou moins testées) : [Gitkraken](https://www.gitkraken.com/), [Github Desktop](https://desktop.github.com/), [Tortoise git](https://tortoisegit.org/), [Sourcetree](https://www.sourcetreeapp.com/), [Tower](https://www.git-tower.com/windows/), Git gui (taper `git gui` dans la console), [gitg](https://wiki.gnome.org/Apps/Gitg/), gitk (distribué avec git aussi, ne fait que afficher les commits sans permettre d'en créer, taper `gitk` pour lancer), [Eclipse](https://eclipse.org/) a une interface ou un plugin, les IDE [Jetbrains](https://www.jetbrains.com/) ont une interface, [Visual Studio Code](https://code.visualstudio.com/) gère ça nativement aussi, [atom](https://atom.io/) a un plugin, [Sublime Text](http://www.sublimetext.com/) a un plugin...
 
 On vérifie que ça marche bien avec `git --version`.
 
@@ -189,20 +203,26 @@ $ git commit
 ### Les différentes "zones" de git
 
 Que s'est-il passé juste avant ?
+
 On avait un fichier qui était "untracked". On l'a déplacé dans la zone "staged" avec la commande `git add`, puis dans la zone "**À CHERCHER**" avec `git commit`.
 
 
 
 ## Trucs à savoir
 
-`git config --global user.name "Thomas Gaudin"`
+`git config --global user.name "Thomas Gaudin"`  
 `git config --global user.email "thomas.gaudin@centraliens-lille.org"`
+
 Config : `pull --ff-only`, `merge --no-ff`
+
 Git aime le texte, pas les binaires. Pourquoi ? diff, merge, commits légers, fichiers normalement plus petits... -> git lfs ? l'autre truc ?
+
 **JAMAIS** faire de `git add .`
 
 ------------------------
 
 ### Sources
 
+- "Git training" de Matthieu Lemoine https://github.com/MatthieuLemoine/git-training
+- https://git-scm.com/downloads/guis
 - XKCD https://xkcd.com/1296/
