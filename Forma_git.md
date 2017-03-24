@@ -219,6 +219,8 @@ Git aime le texte, pas les binaires. Pourquoi ? diff, merge, commits légers, fi
 
 **JAMAIS** faire de `git add .`
 
+Parler du `.gitignore`
+
 ------------------------
 
 ### Sources
