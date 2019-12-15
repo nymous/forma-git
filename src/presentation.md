@@ -97,7 +97,7 @@ count: false
 <br />
 
 .right-column[
-  - Si jamais son ordinateur meurt, adieu code... :cry:
+  - Si jamais son ordinateur meurt, adieu code... 😢
 ]
 
 ---
