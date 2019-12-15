@@ -13,11 +13,11 @@ class: center, middle, inverse
 
 <br />
 <br />
-#### https://tikiki.github.io/forma-git
+#### https://nymous.github.io/forma-git
 
 ---
 
-## Première partie : 
+## Première partie :
 # Pourquoi utiliser un gestionnaire de version ?
 
 ---
@@ -142,4 +142,4 @@ template: inverse
 
 # The end
 
-### https://tikiki.github.io/forma-boilerplate
+### https://nymous.github.io/forma-git
